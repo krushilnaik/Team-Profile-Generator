@@ -14,6 +14,75 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
+/**
+ * Questions to ask if the user requests to add a Manager
+ * @type {inquirer.QuestionCollection}
+ */
+const managerQuestions = [
+	{
+		name: "managerName", type: "input",
+		message: "What is the team manager's name?"
+	},
+	{
+		name: "managerID", type: "input",
+		message: "What is the team manager's id?"
+	},
+	{
+		name: "managerEmail", type: "input",
+		message: "What is the team manager's email?"
+	},
+	{
+		name: "managerOfficeNumner", type: "input",
+		message: "What is the team manager's office number?"
+	}
+];
+
+/**
+ * Questions to ask if the user requests to add an Engineer
+ * @type {inquirer.QuestionCollection}
+ */
+const engineerQuestions = [
+	{
+		name: "engineerName", type: "input",
+		message: "What is your engineer's name?"
+	},
+	{
+		name: "engineerID", type: "input",
+		message: "What is your engineer's name?"
+	},
+	{
+		name: "engineerEmail", type: "input",
+		message: "What is your engineer's name?"
+	},
+	{
+		name: "engineerGithub", type: "input",
+		message: "What is your engineer's name?"
+	}
+];
+
+/**
+ * Questions to ask if the user requests to add an Intern
+ * @type {inquirer.QuestionCollection}
+ */
+const internQuestions = [
+	{
+		name: "internName", type: "input",
+		message: "What is your intern's name?"
+	},
+	{
+		name: "internName", type: "input",
+		message: "What is your intern's ID?"
+	},
+	{
+		name: "internName", type: "input",
+		message: "What is your intern's email?"
+	},
+	{
+		name: "internName", type: "input",
+		message: "What is your intern's school?"
+	},
+];
+
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
