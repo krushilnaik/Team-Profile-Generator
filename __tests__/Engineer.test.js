@@ -1,15 +1,20 @@
-describe("Engineer test", () => {
-	// Initialization
-	describe("Test the constructors", () => {
-		// Positive test
+// @ts-nocheck
+const Engineer = require("../lib/Engineer");
 
-		// Negative test
-	});
+test("Can set GitHUb account via constructor", () => {
+	const testValue = "GitHubUser";
+	const e = new Engineer("Foo", 1, "test@test.com", testValue);
+	expect(e.github).toBe(testValue);
+});
 
-	// Getters
-	describe("Test the getter functions", () => {
-		// Positive test
+test("getRole() should return \"Engineer\"", () => {
+	const testValue = "Engineer";
+	const e = new Engineer("Foo", 1, "test@test.com", "GitHubUser");
+	expect(e.getRole()).toBe(testValue);
+});
 
-		// Negative test
-	});
+test("Can get GitHub username via getGithub()", () => {
+	const testValue = "GitHubUser";
+	const e = new Engineer("Foo", 1, "test@test.com", testValue);
+	expect(e.getGithub()).toBe(testValue);
 });

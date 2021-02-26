@@ -1,15 +1,21 @@
-describe("Intern test", () => {
-	// Initialization
-	describe("Test the constructors", () => {
-		// Positive test
+// @ts-nocheck
 
-		// Negative test
-	});
+const Intern = require("../lib/Intern");
 
-	// Getters
-	describe("Test the getter functions", () => {
-		// Positive test
+test("Can set school via constructor", () => {
+	const testValue = "UCLA";
+	const e = new Intern("Foo", 1, "test@test.com", testValue);
+	expect(e.school).toBe(testValue);
+});
 
-		// Negative test
-	});
+test("getRole() should return \"Intern\"", () => {
+	const testValue = "Intern";
+	const e = new Intern("Foo", 1, "test@test.com", "UCLA");
+	expect(e.getRole()).toBe(testValue);
+});
+
+test("Can get school via getSchool()", () => {
+	const testValue = "UCLA";
+	const e = new Intern("Foo", 1, "test@test.com", testValue);
+	expect(e.getSchool()).toBe(testValue);
 });
