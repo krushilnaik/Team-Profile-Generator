@@ -1,6 +1,6 @@
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const { Manager } = require("./lib/Manager");
+const { Engineer } = require("./lib/Engineer");
+const { Intern } = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -20,19 +20,19 @@ const render = require("./lib/htmlRenderer");
  */
 const managerQuestions = [
 	{
-		name: "managerName", type: "input",
+		name: "name", type: "input",
 		message: "What is the team manager's name?"
 	},
 	{
-		name: "managerID", type: "input",
+		name: "id", type: "input",
 		message: "What is the team manager's id?"
 	},
 	{
-		name: "managerEmail", type: "input",
+		name: "email", type: "input",
 		message: "What is the team manager's email?"
 	},
 	{
-		name: "managerOfficeNumner", type: "input",
+		name: "officeNumber", type: "input",
 		message: "What is the team manager's office number?"
 	}
 ];
@@ -43,20 +43,20 @@ const managerQuestions = [
  */
 const engineerQuestions = [
 	{
-		name: "engineerName", type: "input",
+		name: "name", type: "input",
 		message: "What is your engineer's name?"
 	},
 	{
-		name: "engineerID", type: "input",
-		message: "What is your engineer's name?"
+		name: "id", type: "input",
+		message: "What is your engineer's id?"
 	},
 	{
-		name: "engineerEmail", type: "input",
-		message: "What is your engineer's name?"
+		name: "email", type: "input",
+		message: "What is your engineer's email?"
 	},
 	{
-		name: "engineerGithub", type: "input",
-		message: "What is your engineer's name?"
+		name: "github", type: "input",
+		message: "What is your engineer's github?"
 	}
 ];
 
@@ -66,19 +66,19 @@ const engineerQuestions = [
  */
 const internQuestions = [
 	{
-		name: "internName", type: "input",
+		name: "name", type: "input",
 		message: "What is your intern's name?"
 	},
 	{
-		name: "internName", type: "input",
+		name: "id", type: "input",
 		message: "What is your intern's ID?"
 	},
 	{
-		name: "internName", type: "input",
+		name: "email", type: "input",
 		message: "What is your intern's email?"
 	},
 	{
-		name: "internName", type: "input",
+		name: "school", type: "input",
 		message: "What is your intern's school?"
 	},
 ];
