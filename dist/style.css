@@ -1,0 +1,20 @@
+.team-area {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+	width: 75%;
+}
+
+.employee-card {
+	width: 280px;
+	border: none;
+	box-shadow: 3px 3px 6px #3f3f3f;
+}
+	.employee-card .card-header {
+		background-color: #4a82e9;
+		color: honeydew;
+	}
+	.employee-card .card-body {
+		background-color: #ececec;
+	}
