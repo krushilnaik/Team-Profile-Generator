@@ -138,6 +138,10 @@ async function init() {
 	}
 
 	console.log(teamMembers);
+
+	const htmlContent = render(teamMembers);
+
+	fs.writeFileSync("./dist/team.html", htmlContent);
 }
 
 init();
