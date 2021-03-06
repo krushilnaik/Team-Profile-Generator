@@ -32,6 +32,8 @@ npm install
 
 Run `npm index` and follow prompts to add team members. Only supports Managers, Engineers, and Interns.
 
+[Video Demonstration](https://youtu.be/D9alqfOQsic)
+
 ## License
 
 This project is licensed under the MIT License.
